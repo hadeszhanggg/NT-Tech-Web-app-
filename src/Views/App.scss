@@ -13,19 +13,31 @@
   color: black; 
   text-align: center;
 }
-
+.App-header img {
+  max-width: 300vh;
+  max-height: 100vh;
+}
 .App-content {
   display: flex;
   height: 70%; /* Chia nội dung còn lại chiếm 70% chiều cao */
 }
-
 .App-logo {
-  flex: 40%; /* Chiếm 40% chiều rộng của App-content */
+  flex: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10%; /* Thêm margin để tạo khoảng cách giữa logo và form */
+  margin-right: 10%;
 }
+
+@keyframes App-logo-spin {
+  0%, 100% {
+    transform: rotateY(0deg); /* Ban đầu và sau khi hoàn thành vòng quay, xoay 0 độ theo trục Y */
+  }
+  50% {
+    transform: rotateY(180deg); /* Ở giữa vòng quay, xoay 180 độ theo trục Y (xoay qua mặt sau) */
+  }
+}
+
 
 .App-form-container {
   flex: 60%; /* Chiếm 60% chiều rộng của App-content */
@@ -37,13 +49,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
