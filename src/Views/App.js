@@ -1,14 +1,19 @@
-//import logo from '../Assets/images/logoNTTandSlogan.gif';
-//import slogan from '../Assets/images/slogan.gif';
-import SignInSide from '../Components/Login/Login'
-//import RegisterForm from '../Components/RegisterForm';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignInSide from '../Components/Login/Login';
+import SignUpSide from '../Components/Signup/Signup';
 import './App.scss';
-//import Main from '../Components/MainScreen';
+
 function App() {
   return (
-    <div className="App"> 
-        <SignInSide></SignInSide>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/signin" element={<SignInSide />} />
+          <Route path="/signup" element={<SignUpSide />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
