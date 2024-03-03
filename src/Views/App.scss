@@ -1,27 +1,38 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+.App-header {
+  background-color: white;
+  height: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black; 
+  text-align: center;
+}
+
+.App-content {
+  display: flex;
+  height: 70%; /* Chia nội dung còn lại chiếm 70% chiều cao */
+}
+
+.App-logo {
+  flex: 40%; /* Chiếm 40% chiều rộng của App-content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10%; /* Thêm margin để tạo khoảng cách giữa logo và form */
+}
+
+.App-form-container {
+  flex: 60%; /* Chiếm 60% chiều rộng của App-content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .App-link {

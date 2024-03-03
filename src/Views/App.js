@@ -1,16 +1,23 @@
-import logo from '../Assets/images/logo_ĐVT.gif';
-//import LoginForm from '../Components/LoginForm';
+import logo from '../Assets/images/logoNTTandSlogan.gif';
 import RegisterForm from '../Components/RegisterForm';
 import './App.scss';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <RegisterForm></RegisterForm>
+        <p> Welcome to NT Tech, signup account for use our services, please!</p>
       </header>
+      <div className="App-content">
+          <div className="App-logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <div className="App-form-container">
+            <RegisterForm></RegisterForm>
+          </div>
+        </div>
     </div>
-  );  
+  );
 }
 
 export default App;
