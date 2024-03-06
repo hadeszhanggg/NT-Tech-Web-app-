@@ -135,7 +135,7 @@ export default function SignUpSide() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-              <Link to="/signin" variant="body2"> {" Already have an account? Sign in"} </Link>              
+              <Link to="/" variant="body2"> {" Already have an account? Sign in"} </Link>              
               </Grid>
             </Grid>
             <Copyright sx={{ mt: 5 }} />
