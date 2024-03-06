@@ -5,50 +5,39 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    icon: <GitHubIcon />,
+    title: 'Github profile:',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      'Vui lòng click vào icon để tham quan trang github cá nhân của tôi, thông tin tổng quan về các dự án mà tôi đang thực hiện (trừ private).',
+      url: 'https://github.com/hadeszhanggg'
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    icon: <TelegramIcon />,
+    title: 'Contact me by telegram:',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      'Click vào icon để vào nhóm chát telegram.',
+      url: 'https://t.me/+iPJ__OQ-SzM1NjA1'
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
+    icon: <FacebookIcon/>,
+    title: 'Facebook profile:',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+      'Click vào icon để đến trang facebook của tôi.',
+      url:'https://www.facebook.com/profile.php?id=100091911450657&mibextid=ZbWKwL'
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    icon: <EmailIcon/>,
+    title: 'Contact me by email',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'truongdangminhtan333@gmail.com, hadeszhangg@gmail.com',
   },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
-    description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
-  },
-  {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
-    description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
-  },
+
 ];
 
 export default function Highlights() {
@@ -78,42 +67,42 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Fouder (Hades Zhang) 
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+           Software Engineer
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
           {items.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Stack
-                direction="column"
-                color="inherit"
-                component={Card}
-                spacing={1}
-                useFlexGap
-                sx={{
-                  p: 3,
-                  height: '100%',
-                  border: '1px solid',
-                  borderColor: 'grey.800',
-                  background: 'transparent',
-                  backgroundColor: 'grey.900',
-                }}
-              >
-                <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
-                <div>
-                  <Typography fontWeight="medium" gutterBottom>
-                    {item.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
-                    {item.description}
-                  </Typography>
-                </div>
-              </Stack>
+  <Stack
+  direction="column"
+  color="inherit"
+  component={Card}
+  spacing={1}
+  useFlexGap
+  sx={{
+    p: 3,
+    height: '100%',
+    border: '1px solid',
+    borderColor: 'grey.800',
+    background: 'transparent',
+    backgroundColor: 'grey.900',
+  }}
+>
+  <a href={item.url} target="_blank" rel="noopener noreferrer">
+    <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
+  </a>
+  <div>
+    <Typography fontWeight="medium" gutterBottom>
+      {item.title}
+    </Typography>
+    <Typography variant="body2" sx={{ color: 'grey.400' }}>
+      {item.description}
+    </Typography>
+  </div>
+</Stack>
             </Grid>
           ))}
         </Grid>

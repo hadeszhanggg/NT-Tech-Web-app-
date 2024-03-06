@@ -112,7 +112,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Highlights
+                    Fouder
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -120,7 +120,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Pricing
+                    Liên hệ
                   </Typography>
                 </MenuItem>
                 <MenuItem
